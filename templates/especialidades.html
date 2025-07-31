@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestras Especialidades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Centro_medico/static/servicios/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: rgb(25, 182, 235);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">VittaliMed</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="especialidades.html">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center mb-5">Especialidades Médicas</h2>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/Medicina-general-y-familiar-en-salud-nacional-1.jpg" alt="Medicina general">
+        <h3>Medicina General</h3>
+        <div class="card-detalle">
+            <p>Es la atención médica básica. Te ayuda con diagnósticos, controles de salud y tratamiento de enfermedades comunes. Es el primer paso cuando necesitas atención médica.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/medicina_familiar.webp" alt="Medicina familiar">
+        <h3>Medicina Familiar</h3>
+        <div class="card-detalle">
+            <p>Similar a medicina general, pero con un enfoque en el cuidado integral y continuo de toda la familia, desde niños hasta adultos mayores.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/geriatria.jpg" alt="Geriatría">
+        <h3>Geriatría</h3>
+        <div class="card-detalle">
+            <p>Especializada en la salud de personas mayores. Ayuda a tratar enfermedades propias de la vejez y a mejorar la calidad de vida de los adultos mayores.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/salud_mental.jpg" alt="Salud Mental">
+        <h3>Salud Mental</h3>
+        <div class="card-detalle">
+            <p>Apoya el bienestar emocional, psicológico y social. Aquí puedes recibir ayuda para tratar estrés, ansiedad, depresión u otros trastornos mentales.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/kinesiologia-saludplus.webp" alt="Kinesiología">
+        <h3>Kinesiología</h3>
+        <div class="card-detalle">
+            <p>Se enfoca en la recuperación del movimiento y la función física, ideal después de lesiones, cirugías o enfermedades que afecten los músculos o articulaciones.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/Terapia-Ocupacional-en-Salud-Mental.png" alt="Terapia ocupacional">
+        <h3>Terapia Ocupacional</h3>
+        <div class="card-detalle">
+            <p>Ayuda a personas con dificultades físicas o mentales a desarrollar o recuperar habilidades necesarias para la vida diaria y el trabajo.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/dental.jpg" alt="Dental">
+        <h3>Dental</h3>
+        <div class="card-detalle">
+            <p>Atiende la salud bucal: limpieza, caries, extracciones, ortodoncia y más. Ideal para mantener dientes y encías sanos.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/matrona.jpg" alt="Matrona">
+        <h3>Matrona</h3>
+        <div class="card-detalle">
+            <p>Especialista en salud sexual y reproductiva de la mujer: embarazo, parto, anticoncepción, controles ginecológicos y más.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/psicologia.jpeg" alt="Psicología">
+        <h3>Psicología</h3>
+        <div class="card-detalle">
+            <p>Ofrece terapia y orientación para enfrentar problemas emocionales, personales o de comportamiento, tanto en adultos como en niños.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/nutricion-bariatrica.png" alt="Nutrición Bariátrica">
+        <h3>Nutrición Bariátrica</h3>
+        <div class="card-detalle">
+            <p>Enfocada en personas con obesidad o que se han sometido a cirugía bariátrica. Ayuda a controlar el peso de forma segura y saludable.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/nutricionjpg.webp" alt="Nutricionista">
+        <h3>Nutricionista</h3>
+        <div class="card-detalle">
+            <p>Te asesora para mejorar tu alimentación, ya sea por salud, enfermedades específicas o control de peso.</p>
+        </div>
+        </div>
+
+        <div class="card-especialidad" onclick="toggleCard(this)">
+        <img src="/Centro_medico/img/servicios/toma_de_muestras.jpg" alt="Laboratorio clinico">
+        <h3>Laboratorio clinico</h3>
+        <div class="card-detalle">
+            <p>Realiza exámenes médicos (como sangre u orina) que ayudan a diagnosticar enfermedades o hacer controles preventivos.</p>
+        </div>
+        </div>
+
+
+    <footer class="text-center p-3 text-white mt-auto" style="background-color: rgb(25, 182, 235);">
+        <div class="container py-4">
+            <div class="row footer-links">
+                <div class="col-md-4 footer-section mb-3">
+                    <h5>Contáctenos</h5>
+                    <p><a href="tel:+56943545200" class="text-white text-decoration-none"><i class="fas fa-phone-alt me-2"></i> +56 943545200</a></p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Vicuña Mackenna 1345, Peñaflor</p>
+                </div>
+                <div class="col-md-4 footer-section mb-3">
+                    <h5>Síganos</h5>
+                    <p><a href="#" target="_blank" class="text-white text-decoration-none"><i class="fab fa-facebook-f me-2"></i> Facebook</a></p>
+                    <p><a href="#" target="_blank" class="text-white text-decoration-none"><i class="fab fa-twitter me-2"></i> Twitter</a></p>
+                    <p><a href="https://www.instagram.com/centromedicovittalimed" target="_blank" class="text-white text-decoration-none"><i class="fab fa-instagram me-2"></i> Instagram</a></p>
+                </div>
+                <div class="col-md-4 footer-section mb-3">
+                    <h5>Nuestros servicios</h5>
+                    <p><i class="fas fa-stethoscope me-2"></i> Consulta Médica</p>
+                    <p><i class="fas fa-heartbeat me-2"></i> Rehabilitación</p>
+                    <p><i class="fas fa-brain me-2"></i> Salud Mental</p>
+                    <p><i class="fas fa-tooth me-2"></i> Odontología</p>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-white">
+                © 2025 Centro Médico. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+    function toggleCard(card) {
+        card.classList.toggle('expandida');
+    }
+    </script>
+
+</body>
+</html>
