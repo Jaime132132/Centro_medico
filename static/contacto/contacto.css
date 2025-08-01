@@ -1,3 +1,14 @@
+/* Sticky Footer con Flexbox */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+body > main {
+    flex: 1;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
@@ -63,7 +74,21 @@ form {
       color: green;
     }
 
-    .footer {
+    .antispam-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #17a2b8;
+  font-size: 0.9rem;
+}
+.antispam-container label {
+  font-weight: 500;
+  color: #333;
+}
+
+
+/* Footer Styles */
+.footer {
     color: #fff;
     padding: 20px;
 }

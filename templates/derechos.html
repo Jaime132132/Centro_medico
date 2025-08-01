@@ -2,19 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>VittaliMed</title>
+    <title>Contáctanos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Asegura responsividad -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="../img/logo_laboratorio_vittalimed.jpg" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../static/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="../img/logo_laboratorio_vittalimed.jpg" type="image/png">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: rgb(25, 182, 235);">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-            <img src="/img/logo_laboratorio_vittalimed.jpg" alt="Vittalimed" style="height: 80px; width: auto;">
+            <a class="navbar-brand d-flex flex-column align-items-center" href="index.html">
+                <img src="/img/logo_latidos.png" alt="Vittalimed" style="height: 20px; width: auto;">
+                <span style="font-weight: bold;">
+                    <span style="color: rgb(85, 239, 206);">Vittali</span><span style="color: white;">Med</span>
+                </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -23,70 +28,100 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="especialidades.html">Especialidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Formulario responsivo -->
     <div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10 text-center">
-      <img 
-        src="../img/carta-deberes-y-derechos-pacientes-800x800-1.png.webp" 
-        alt="Carta de derechos y deberes" 
-        class="img-fluid rounded shadow"
-        style="max-height: 600px; object-fit: contain;"
-      >
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <form id="contact-form" class="p-4 border rounded shadow-sm bg-light">
+                    <h2 class="mb-4 text-center">Contáctanos</h2>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" name="from_name" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email" name="reply_to" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mensaje</label>
+                        <textarea name="message" rows="5" class="form-control" required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                    <p class="alert mt-3 text-center" id="response-message"></p>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-
+    <!-- Footer responsivo y fijo al fondo -->
     <footer class="text-center p-3 text-white mt-auto" style="background-color: rgb(25, 182, 235);">
         <div class="container py-4">
-        <div class="row footer-links">
-            <div class="col-md-4 footer-section mb-3">
-                <h5>Contáctenos</h5>
-                <p>
-                <a href="https://wa.me/56943545200" target="_blank" class="text-white text-decoration-none">
-                    <i class="fas fa-phone-alt me-2"></i> +56 943545200
-                </a>
-                </p>
-                <p>
-                <a href="https://maps.app.goo.gl/5V73w6kPY1ep7iJPA" target="_blank" class="text-white text-decoration-none">
-                <i class="fas fa-map-marker-alt me-2"></i> Vicuña Mackenna 1345, Peñaflor
-                </a>
-                </p>
-            </div>
-            <div class="col-md-4 footer-section mb-3">
-        <h5 class="text-white">Síguenos</h5>
-
-        <p>
-            <a href="https://www.facebook.com/vittalimed/" target="_blank" class="text-white text-decoration-none">
-                <i class="fab fa-facebook-f me-2"></i> Facebook
-            </a>
-        </p>
-
-        <p>
-            <a href="https://www.instagram.com/centromedicovittalimed?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-white text-decoration-none">
-                <i class="fab fa-instagram me-2"></i> Instagram
-            </a>
-        </p>
-        </div>
-
-                    <div class="col-md-4 footer-section mb-3">
-                        <h5>Datos importantes</h5>
-                        <a class="nav-link active" href="derechos.html">
-                            <i class="bi bi-balance-scale"></i> Ver Derechos del Paciente
+            <div class="row footer-links">
+                <div class="col-md-4 mb-3">
+                    <h5>Contáctenos</h5>
+                    <p>
+                        <a href="https://wa.me/56943545200" target="_blank" class="text-white text-decoration-none">
+                            <i class="fas fa-phone-alt me-2"></i> +56 943545200
                         </a>
-                    </div>
+                    </p>
+                    <p>
+                        <a href="https://maps.app.goo.gl/5V73w6kPY1ep7iJPA" target="_blank" class="text-white text-decoration-none">
+                            <i class="fas fa-map-marker-alt me-2"></i> Vicuña Mackenna 1345, Peñaflor
+                        </a>
+                    </p>
                 </div>
-                <div class="text-center pt-3 border-top border-white">
-                    © 2025 Centro Médico. Todos los derechos reservados.
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <p>
+                        <a href="https://www.facebook.com/vittalimed/" target="_blank" class="text-white text-decoration-none">
+                            <i class="fab fa-facebook-f me-2"></i> Facebook
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.instagram.com/centromedicovittalimed" target="_blank" class="text-white text-decoration-none">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                    </p>
                 </div>
-            </div
+                <div class="col-md-4 mb-3">
+                    <h5>Datos importantes</h5>
+                    <a class="nav-link active text-white" href="derechos.html">
+                        <i class="bi bi-balance-scale"></i> Ver Derechos del Paciente
+                    </a>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-white">
+                © 2025 Centro Médico. Todos los derechos reservados.
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Inicializa EmailJS
+        (function(){
+            emailjs.init("zxDWpoxIwuMmDWjgg"); // <- Reemplaza con TU Public Key
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_tjnxjel", "template_uyouz18", this)
+            .then(() => {
+                document.getElementById("response-message").textContent = "¡Mensaje enviado con éxito!";
+                this.reset();
+            }, (error) => {
+                document.getElementById("response-message").textContent = "Error al enviar: " + error.text;
+            });
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
